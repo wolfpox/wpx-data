@@ -1,0 +1,100 @@
+{
+  "StaffData": {
+    "OperativeStaff": {
+      "Hunters": ["Scanner", "Hacker", "Infiltrator", "Double Agent"],
+      "Breakers": ["Gunner", "Sniper", "Demolitionist", "Trapper"],
+      "Guardians": ["Security", "Holder", "Extractor", "Interceptor"]
+    },
+    "FacilityStaff": {
+      "Support": {
+        "DataSupport": {
+          "Analysts": ["Signal", "Behavior", "Linguist", "Chemist"],
+          "Planners": ["Hunter Advice", "Breaker Advice", "Guardian Advice"]
+        },
+        "LogisticsSupport": {
+          "ProcurementAndSales": {
+            "Brokers": [
+              "Combat Broker",
+              "Demolitions Broker",
+              "Sensor Broker",
+              "Computer Broker",
+              "Landcraft Broker",
+              "Watercraft Broker",
+              "Aircraft Broker",
+              "Orbitcraft Broker",
+              "Tool Broker",
+              "Furnishing Broker",
+              "Chemical Broker",
+              "Rare Matter Broker",
+              "Lab Broker",
+              "Security Broker"
+            ]
+          },
+          "Delivery": {
+            "Roles": ["Coordinator", "Storage Manager", "Inspector"],
+            "Transport": [
+              "Orbit Launcher",
+              "Surface Launcher",
+              "Aerial Exchange Pilot",
+              "Surface Transport"
+            ]
+          }
+        },
+        "ConditionSupport": {
+          "MedicalTreatment": ["Diagnostic", "Surgeon", "Nurse", "Psychologist"],
+          "PhysiologyCoach": [
+            "Power Trainer",
+            "Movement Trainer",
+            "Accuracy Trainer",
+            "Finesse Trainer"
+          ],
+          "Augmenters": [
+            "Cybernetic Tailor",
+            "Genetic Tailor",
+            "Identity Tailor"
+          ],
+          "SkillCoach": {
+            "HunterSpecialists": [
+              "Scanner Coach",
+              "Hacker Coach",
+              "Infiltration Coach",
+              "Disguise Coach",
+              "Evasion Coach",
+              "Encryption Coach",
+              "Pursuit Coach"
+            ],
+            "BreakerSpecialists": [
+              "Melee Coach",
+              "Small Arms Coach",
+              "Sniper Coach",
+              "Demolitions Coach",
+              "Swarm Coach",
+              "Area Denial Coach"
+            ],
+            "VehicleHandlingSpecialists": [
+              "Landcraft Coach",
+              "Watercraft Coach",
+              "Aircraft Coach"
+            ]
+          }
+        },
+        "EngineeringSupport": {
+          "Facility": ["Planning", "Maintenance", "Development"],
+          "Vehicle": ["Planning", "Maintenance", "Development"],
+          "Equipment": ["Planning", "Maintenance", "Development"]
+        },
+        "ScienceSupport": {
+          "Research": ["Biological", "Robotics", "Materials"],
+          "Prototype": ["Biological", "Robotics", "Materials"]
+        },
+        "LiaisonSupport": {
+          "Organizations": [
+            "Interstellar Uniforce",
+            "Planetary Tribunal",
+            "Underworld Negotiation"
+          ]
+        }
+      }
+    }
+  }
+}
