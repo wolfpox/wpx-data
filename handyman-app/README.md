@@ -15,8 +15,10 @@ reminders via push notification.
 
 ## Status
 
-Early design. Workflow, data model, and tech stack are under discussion.
+Early design. Workflow and data model are being captured in
+[`DESIGN.md`](./DESIGN.md). Tech stack is intentionally deferred.
 
 ## Layout
 
+- [`DESIGN.md`](./DESIGN.md) — design notes and decisions
 - `rules/` — JSON library of maintenance rules (schema TBD)
