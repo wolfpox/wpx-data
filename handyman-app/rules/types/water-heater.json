@@ -1,0 +1,40 @@
+{
+  "id": "water-heater",
+  "name": "Water Heater",
+  "category": "Plumbing",
+  "synonyms": ["hot water heater", "hot water tank", "water tank"],
+  "placeholder_art": "water-heater.svg",
+  "summary": "Heats and stores domestic hot water.",
+  "education": "Tank-style water heaters typically last 8-12 years. Sediment builds up at the bottom over time, reducing efficiency and capacity. A failing pressure-relief valve or anode rod is far cheaper to replace than the tank itself.",
+  "questions": [
+    {"id": "type", "prompt": "Type?", "type": "choice", "options": ["tank gas", "tank electric", "tankless gas", "tankless electric", "heat pump", "other"]},
+    {"id": "capacity", "prompt": "Capacity in gallons (if tank)?", "type": "free_text"},
+    {"id": "install_year", "prompt": "Year installed?", "type": "free_text"}
+  ],
+  "suggested_photos": [
+    {"id": "nameplate", "prompt": "Model and serial nameplate"},
+    {"id": "full", "prompt": "Full unit including connections at the top"},
+    {"id": "drain_valve", "prompt": "The drain valve at the base"}
+  ],
+  "maintenance": [
+    {
+      "action": "Flush the tank to clear sediment",
+      "cadence": {"frequency": "yearly"},
+      "cadence_text": "Once a year",
+      "why": "Sediment insulates the burner from the water, raising bills and shortening the tank's life."
+    },
+    {
+      "action": "Test the pressure-relief valve",
+      "cadence": {"frequency": "yearly"},
+      "cadence_text": "Once a year",
+      "why": "A stuck valve cannot vent excess pressure, which is a real safety hazard."
+    },
+    {
+      "action": "Check the anode rod",
+      "cadence": {"frequency": "every_5_years"},
+      "cadence_text": "Every 3-5 years",
+      "why": "The anode corrodes in place of the tank. When it's gone, the tank starts to."
+    }
+  ],
+  "related_types": ["sump-pump", "main-shutoff"]
+}

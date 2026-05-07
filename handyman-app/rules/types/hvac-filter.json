@@ -1,0 +1,27 @@
+{
+  "id": "hvac-filter",
+  "name": "HVAC Filter",
+  "category": "HVAC",
+  "synonyms": ["furnace filter", "air filter", "return filter"],
+  "placeholder_art": "hvac-filter.svg",
+  "summary": "Disposable filter that traps dust before air enters the furnace or AC.",
+  "education": "A clean filter improves efficiency and protects the blower motor and coils from buildup. Higher MERV ratings catch finer particles but restrict airflow more, so pick a rating your system can handle without straining.",
+  "questions": [
+    {"id": "size", "prompt": "Filter size (e.g., 16x25x1)?", "type": "free_text"},
+    {"id": "merv", "prompt": "MERV rating?", "type": "free_text"},
+    {"id": "location", "prompt": "Where does it go?", "type": "free_text"}
+  ],
+  "suggested_photos": [
+    {"id": "current_filter", "prompt": "The filter showing its size printed on the frame"},
+    {"id": "slot", "prompt": "Where it slides in"}
+  ],
+  "maintenance": [
+    {
+      "action": "Replace the filter",
+      "cadence": {"frequency": "quarterly"},
+      "cadence_text": "Every 1-3 months while the system runs",
+      "why": "A clogged filter strains the blower, raises bills, and lets dust through gaps."
+    }
+  ],
+  "related_types": ["furnace", "air-conditioner"]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "dryer-vent",
+  "name": "Dryer Vent",
+  "category": "Safety and Detection",
+  "synonyms": ["dryer duct", "dryer exhaust"],
+  "placeholder_art": "dryer-vent.svg",
+  "summary": "Exhausts hot, moist air and lint from the clothes dryer to outside.",
+  "education": "Lint accumulates inside the duct over time and is highly flammable. Clogged dryer vents are one of the leading causes of house fires. Long, twisty runs to the outside need cleaning more often than short straight ones.",
+  "questions": [
+    {"id": "run_length", "prompt": "Approximate run length?", "type": "free_text"},
+    {"id": "exit_location", "prompt": "Where does it exit the house?", "type": "free_text"}
+  ],
+  "suggested_photos": [
+    {"id": "interior_connection", "prompt": "Where the duct connects to the dryer"},
+    {"id": "exterior_vent", "prompt": "Exterior vent hood (with the flap)"}
+  ],
+  "maintenance": [
+    {
+      "action": "Clean lint from the entire duct run",
+      "cadence": {"frequency": "yearly"},
+      "cadence_text": "At least once a year",
+      "why": "Lint builds up beyond the lint trap and can ignite from a hot exhaust."
+    },
+    {
+      "action": "Check that the exterior flap opens freely",
+      "cadence": {"frequency": "twice_yearly"},
+      "cadence_text": "Twice a year",
+      "why": "Stuck flaps trap moist air inside and let pests in."
+    }
+  ],
+  "related_types": ["dryer", "washing-machine"]
+}

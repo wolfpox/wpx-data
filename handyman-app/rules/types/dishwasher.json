@@ -1,0 +1,39 @@
+{
+  "id": "dishwasher",
+  "name": "Dishwasher",
+  "category": "Appliances",
+  "synonyms": [],
+  "placeholder_art": "dishwasher.svg",
+  "summary": "Built-in appliance that washes dishes with hot water and detergent.",
+  "education": "Most dishwashers run for 10-15 years. Filters at the base trap food and gradually clog spray arms. Door gaskets harden and leak. A monthly cleaning cycle and a yearly hose check go a long way.",
+  "questions": [
+    {"id": "brand", "prompt": "Brand?", "type": "free_text"},
+    {"id": "install_year", "prompt": "Year installed?", "type": "free_text"}
+  ],
+  "suggested_photos": [
+    {"id": "model_label", "prompt": "Model and serial label (often on the side of the door when open)"},
+    {"id": "filter", "prompt": "The filter at the bottom"},
+    {"id": "door_gasket", "prompt": "Door gasket (the rubber seal)"}
+  ],
+  "maintenance": [
+    {
+      "action": "Clean the bottom filter",
+      "cadence": {"frequency": "monthly"},
+      "cadence_text": "Once a month",
+      "why": "Trapped food rots and recirculates onto your dishes."
+    },
+    {
+      "action": "Run a cleaning cycle (vinegar or dishwasher cleaner)",
+      "cadence": {"frequency": "monthly"},
+      "cadence_text": "Once a month",
+      "why": "Clears mineral buildup from spray arms and pump."
+    },
+    {
+      "action": "Inspect door gasket and supply hose",
+      "cadence": {"frequency": "yearly"},
+      "cadence_text": "Once a year",
+      "why": "Slow leaks at the connection or gasket cause cabinet rot before you notice."
+    }
+  ],
+  "related_types": ["garbage-disposal", "kitchen-faucet"]
+}

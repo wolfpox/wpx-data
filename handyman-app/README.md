@@ -21,4 +21,4 @@ Early design. Workflow and data model are being captured in
 ## Layout
 
 - [`DESIGN.md`](./DESIGN.md) — design notes and decisions
-- `rules/` — JSON library of maintenance rules (schema TBD)
+- [`rules/`](./rules) — JSON library of maintenance rules (schema and 10 starter types)

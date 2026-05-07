@@ -1,0 +1,33 @@
+{
+  "id": "caulking",
+  "name": "Caulking",
+  "category": "Structural and Interior",
+  "synonyms": ["sealant", "caulk", "bead"],
+  "placeholder_art": "caulking.svg",
+  "summary": "Flexible sealant that closes gaps around tubs, sinks, windows, and trim.",
+  "education": "Caulk is the first line of defense against water intrusion. It cracks and pulls away over time, especially around tubs and showers where movement and constant moisture stress the seal. Refreshing caulk is cheap; the rot it prevents is expensive.",
+  "questions": [
+    {"id": "location", "prompt": "Where is this run of caulk?", "type": "free_text"},
+    {"id": "type", "prompt": "Type?", "type": "choice", "options": ["silicone", "latex/acrylic", "polyurethane", "unknown"]},
+    {"id": "last_replaced", "prompt": "When was it last replaced?", "type": "date"}
+  ],
+  "suggested_photos": [
+    {"id": "current_state", "prompt": "Current condition of the bead"},
+    {"id": "any_gaps", "prompt": "Any visible gaps, mold, or pulling away"}
+  ],
+  "maintenance": [
+    {
+      "action": "Inspect for cracks, gaps, or mold",
+      "cadence": {"frequency": "yearly"},
+      "cadence_text": "Once a year",
+      "why": "Catches small failures before water gets behind the wall or into subfloor."
+    },
+    {
+      "action": "Replace the bead",
+      "cadence": {"frequency": "every_5_years"},
+      "cadence_text": "Every 5 years (sooner in showers)",
+      "why": "Old caulk shrinks and pulls away even when it still looks fine."
+    }
+  ],
+  "related_types": ["bathtub", "shower", "kitchen-faucet", "window"]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "fire-extinguisher",
+  "name": "Fire Extinguisher",
+  "category": "Safety and Detection",
+  "synonyms": [],
+  "placeholder_art": "fire-extinguisher.svg",
+  "summary": "Portable device for putting out small fires before they spread.",
+  "education": "Most home extinguishers are dry-chemical ABC units. The pressure gauge tells you if it is still charged. The powder inside can settle and cake if not shaken occasionally. Many have a 6-12 year lifespan from manufacture.",
+  "questions": [
+    {"id": "class", "prompt": "Class?", "type": "choice", "options": ["ABC (multipurpose)", "K (kitchen)", "BC", "other", "unknown"]},
+    {"id": "manufacture_date", "prompt": "Manufacture date (stamped on the bottom or label)?", "type": "date"},
+    {"id": "location", "prompt": "Where is it kept?", "type": "free_text"}
+  ],
+  "suggested_photos": [
+    {"id": "label", "prompt": "Label with class, weight, and manufacture date"},
+    {"id": "gauge", "prompt": "Pressure gauge"}
+  ],
+  "maintenance": [
+    {
+      "action": "Check the pressure gauge",
+      "cadence": {"frequency": "monthly"},
+      "cadence_text": "Once a month",
+      "why": "If the needle drops out of the green, the unit may not discharge in a fire."
+    },
+    {
+      "action": "Shake or invert to loosen the powder",
+      "cadence": {"frequency": "yearly"},
+      "cadence_text": "Once a year",
+      "why": "Caked powder can clog the discharge nozzle."
+    },
+    {
+      "action": "Replace the unit",
+      "cadence": {"frequency": "every_10_years"},
+      "cadence_text": "Every 10-12 years (or per manufacturer)",
+      "why": "Internal parts and seals weaken with age regardless of pressure."
+    }
+  ],
+  "related_types": ["smoke-detector", "co-detector"]
+}

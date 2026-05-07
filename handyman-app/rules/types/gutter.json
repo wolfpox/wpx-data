@@ -1,0 +1,35 @@
+{
+  "id": "gutter",
+  "name": "Gutter",
+  "category": "Roof and Drainage",
+  "synonyms": ["eavestrough", "rain gutter"],
+  "placeholder_art": "gutter.svg",
+  "summary": "Channels rainwater off the roof and away from the foundation.",
+  "education": "Gutters keep roof runoff from soaking into the foundation and basement walls. When they clog or sag, water spills over the edge or sits stagnant, leading to wood rot at the fascia, ice dams in winter, and foundation cracks over time.",
+  "questions": [
+    {"id": "material", "prompt": "What material?", "type": "choice", "options": ["aluminum", "vinyl", "copper", "steel", "wood", "other"]},
+    {"id": "guards", "prompt": "Do they have leaf guards?", "type": "yes_no"},
+    {"id": "trees_overhead", "prompt": "Are there trees overhanging?", "type": "yes_no"},
+    {"id": "last_cleaned", "prompt": "When were these last cleaned?", "type": "date"}
+  ],
+  "suggested_photos": [
+    {"id": "full_length", "prompt": "Full length from the ground"},
+    {"id": "downspout_join", "prompt": "Where the downspout meets the gutter"},
+    {"id": "any_damage", "prompt": "Sag, rust, or visible damage"}
+  ],
+  "maintenance": [
+    {
+      "action": "Clean debris",
+      "cadence": {"frequency": "twice_yearly", "preferred_seasons": ["spring", "fall"]},
+      "cadence_text": "Twice a year, spring and fall",
+      "why": "Clogged gutters overflow against the house and lead to foundation water damage."
+    },
+    {
+      "action": "Inspect for sag, rust, or separation",
+      "cadence": {"frequency": "yearly", "preferred_seasons": ["spring"]},
+      "cadence_text": "Once a year, in spring",
+      "why": "Catches loose hangers and pulled-away sections before a heavy rain reveals them."
+    }
+  ],
+  "related_types": ["downspout", "fascia", "soffit", "roof"]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "smoke-detector",
+  "name": "Smoke Detector",
+  "category": "Safety and Detection",
+  "synonyms": ["smoke alarm", "fire alarm"],
+  "placeholder_art": "smoke-detector.svg",
+  "summary": "Detects smoke and sounds an alarm to alert occupants.",
+  "education": "Modern smoke detectors are typically replaced every 10 years because the sensor element degrades. Most have a manufacture date stamped on the back. Battery-only, hardwired, and combination smoke/CO units all need regular testing.",
+  "questions": [
+    {"id": "type", "prompt": "Type?", "type": "choice", "options": ["battery only", "hardwired", "hardwired with battery backup", "combination smoke/CO"]},
+    {"id": "manufacture_date", "prompt": "Manufacture date (often on the back)?", "type": "date"},
+    {"id": "location", "prompt": "Where is it?", "type": "free_text"}
+  ],
+  "suggested_photos": [
+    {"id": "front", "prompt": "Front of the unit"},
+    {"id": "back_label", "prompt": "Back label with manufacture date"}
+  ],
+  "maintenance": [
+    {
+      "action": "Test the alarm",
+      "cadence": {"frequency": "monthly"},
+      "cadence_text": "Once a month",
+      "why": "Confirms the horn and sensor are working — a dead detector is silent during a fire."
+    },
+    {
+      "action": "Replace the battery",
+      "cadence": {"frequency": "yearly"},
+      "cadence_text": "Once a year (or when it chirps)",
+      "why": "Even battery backups in hardwired units fail without notice."
+    },
+    {
+      "action": "Replace the entire unit",
+      "cadence": {"frequency": "every_10_years"},
+      "cadence_text": "Every 10 years",
+      "why": "The sensor element loses sensitivity even if the alarm still chirps."
+    }
+  ],
+  "related_types": ["co-detector", "fire-extinguisher"]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "sump-pump",
+  "name": "Sump Pump",
+  "category": "Plumbing",
+  "synonyms": ["basement pump", "drainage pump"],
+  "placeholder_art": "sump-pump.svg",
+  "summary": "Pumps groundwater out of the basement sump pit to keep it dry.",
+  "education": "Sump pumps fail at the worst possible time — during the heavy rain that triggered them. A backup battery or water-powered backup is what stands between you and a flooded basement when the power goes out.",
+  "questions": [
+    {"id": "primary_type", "prompt": "Pump type?", "type": "choice", "options": ["submersible", "pedestal"]},
+    {"id": "has_backup", "prompt": "Is there a backup pump or battery?", "type": "yes_no"},
+    {"id": "install_year", "prompt": "Year installed?", "type": "free_text"}
+  ],
+  "suggested_photos": [
+    {"id": "pit", "prompt": "Looking down into the sump pit"},
+    {"id": "discharge", "prompt": "Discharge pipe where it exits the house"},
+    {"id": "nameplate", "prompt": "Pump nameplate with model"}
+  ],
+  "maintenance": [
+    {
+      "action": "Test by pouring water into the pit",
+      "cadence": {"frequency": "quarterly"},
+      "cadence_text": "Every 3 months",
+      "why": "A pump that hasn't run in months may seize. Testing ensures it kicks on."
+    },
+    {
+      "action": "Replace the backup battery",
+      "cadence": {"frequency": "every_5_years"},
+      "cadence_text": "Every 3-5 years",
+      "why": "Sealed lead-acid batteries lose capacity invisibly until the day you need them."
+    },
+    {
+      "action": "Clean debris from the pit",
+      "cadence": {"frequency": "yearly"},
+      "cadence_text": "Once a year",
+      "why": "Gravel and silt jam the float switch — the most common failure mode."
+    }
+  ],
+  "related_types": ["water-heater", "basement-floor-drain"]
+}

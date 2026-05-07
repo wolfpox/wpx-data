@@ -1,0 +1,34 @@
+{
+  "id": "furnace",
+  "name": "Furnace",
+  "category": "HVAC",
+  "synonyms": ["forced-air heater", "gas furnace", "heating system"],
+  "placeholder_art": "furnace.svg",
+  "summary": "Heats and circulates air through the home's ductwork.",
+  "education": "A furnace pulls return air across a heat exchanger and sends it back through the ducts. Routine filter changes and an annual professional inspection extend its life and protect against carbon-monoxide leaks from a cracked heat exchanger.",
+  "questions": [
+    {"id": "fuel", "prompt": "Fuel type?", "type": "choice", "options": ["natural gas", "propane", "oil", "electric", "other"]},
+    {"id": "age", "prompt": "Approximate age?", "type": "free_text"},
+    {"id": "last_serviced", "prompt": "When was it last professionally serviced?", "type": "date"}
+  ],
+  "suggested_photos": [
+    {"id": "nameplate", "prompt": "Nameplate with model and serial number"},
+    {"id": "front", "prompt": "Front of the unit"},
+    {"id": "filter_slot", "prompt": "Where the filter goes (capture the size)"}
+  ],
+  "maintenance": [
+    {
+      "action": "Replace the air filter",
+      "cadence": {"frequency": "quarterly"},
+      "cadence_text": "Every 1-3 months while running",
+      "why": "A clogged filter strains the blower, reduces efficiency, and can overheat the unit."
+    },
+    {
+      "action": "Schedule a professional tune-up",
+      "cadence": {"frequency": "yearly", "preferred_seasons": ["fall"]},
+      "cadence_text": "Once a year, ideally in fall before heating season",
+      "why": "Catches cracked heat exchangers, weak ignitors, and clogged burners before failure."
+    }
+  ],
+  "related_types": ["hvac-filter", "thermostat", "ductwork", "co-detector"]
+}
