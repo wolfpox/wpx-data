@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>handyman-app prototype</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="frame">
+    <p class="caption">handyman-app prototype — clickable lo-fi mockup</p>
+    <div class="phone">
+      <header class="topbar">
+        <div class="property">My Home</div>
+        <div class="property-switch" title="Switch property">▾</div>
+      </header>
+      <nav class="tabs">
+        <button class="tab active" data-view="catalog">Catalog</button>
+        <button class="tab" data-view="todo">To-do</button>
+        <button class="tab" data-view="timeline">Timeline</button>
+      </nav>
+      <main id="view"></main>
+      <button class="fab" id="fab" aria-label="Add">+</button>
+      <div class="modal" id="modal" hidden>
+        <div class="modal-content" id="modalContent"></div>
+      </div>
+    </div>
+    <p class="caption muted">375px viewport · phone-shaped frame · mock data</p>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
