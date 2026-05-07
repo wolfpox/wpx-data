@@ -54,12 +54,14 @@ function renderCatalog() {
   view.innerHTML = `
     <div class="catalog-grid">${cards}</div>
     <div style="height:16px"></div>
-    <div class="suggestions" id="suggestions">
-      <div class="suggestions-header">
-        <span class="suggestions-label">Suggestions</span>
-        <span class="suggestions-toggle" id="suggToggle">▾</span>
+    <div class="suggestions">
+      <div class="suggestions-toggle-target" id="suggToggleTarget">
+        <div class="suggestions-header">
+          <span class="suggestions-label">Suggestions</span>
+          <span class="suggestions-toggle" id="suggToggle">▾</span>
+        </div>
+        <div class="suggestions-preview" id="cyclingPreview">${esc(HOME_PREVIEWS[0])}</div>
       </div>
-      <div class="suggestions-preview" id="cyclingPreview">${esc(HOME_PREVIEWS[0])}</div>
       <div class="suggestions-body" id="suggBody" hidden>
         <h4>Items you may have but haven't catalogued</h4>
         <ul>
@@ -79,7 +81,7 @@ function renderCatalog() {
   view.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', () => renderItem(card.dataset.id));
   });
-  document.getElementById('suggestions').addEventListener('click', toggleSuggestions);
+  document.getElementById('suggToggleTarget').addEventListener('click', toggleSuggestions);
   startCycle('cyclingPreview', HOME_PREVIEWS);
 }
 
@@ -138,12 +140,14 @@ function renderItem(id) {
       <span>last activity 5 days ago</span>
     </div>
 
-    <div class="suggestions" id="suggestions">
-      <div class="suggestions-header">
-        <span class="suggestions-label">Suggestions</span>
-        <span class="suggestions-toggle" id="suggToggle">▾</span>
+    <div class="suggestions">
+      <div class="suggestions-toggle-target" id="suggToggleTarget">
+        <div class="suggestions-header">
+          <span class="suggestions-label">Suggestions</span>
+          <span class="suggestions-toggle" id="suggToggle">▾</span>
+        </div>
+        <div class="suggestions-preview">${esc(previewLine)}</div>
       </div>
-      <div class="suggestions-preview">${esc(previewLine)}</div>
       <div class="suggestions-body" id="suggBody" hidden>
         ${item.education ? `<h4>Why this matters</h4><p>${esc(item.education)}</p>` : ''}
 
@@ -179,7 +183,7 @@ function renderItem(id) {
     setTab('catalog');
     renderCatalog();
   });
-  document.getElementById('suggestions').addEventListener('click', toggleSuggestions);
+  document.getElementById('suggToggleTarget').addEventListener('click', toggleSuggestions);
   clearCycle();
 }
 
@@ -230,14 +234,14 @@ fab.addEventListener('click', () => {
     <button class="modal-option" data-opt="quick"><strong>Quick capture</strong><small>Photo + text — decide later</small></button>
     <button class="modal-option" data-opt="prop"><strong>Property or Space</strong><small>Manage where things live</small></button>
   `;
-  modal.removeAttribute('hidden');
+  modal.classList.add('open');
   modalContent.querySelectorAll('.modal-option').forEach(b => {
-    b.addEventListener('click', () => modal.setAttribute('hidden', ''));
+    b.addEventListener('click', () => modal.classList.remove('open'));
   });
 });
 
 modal.addEventListener('click', (e) => {
-  if (e.target === modal) modal.setAttribute('hidden', '');
+  if (e.target === modal) modal.classList.remove('open');
 });
 
 renderCatalog();

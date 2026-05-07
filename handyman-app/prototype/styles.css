@@ -279,8 +279,11 @@ body {
   border-radius: 12px;
   padding: 12px 14px;
   border: 1px solid #ecdfb9;
-  cursor: pointer;
   margin-bottom: 80px;
+}
+
+.suggestions-toggle-target {
+  cursor: pointer;
 }
 
 .suggestions-header {
@@ -372,10 +375,14 @@ body {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
-  display: flex;
+  display: none;
   align-items: flex-end;
   justify-content: center;
   z-index: 100;
+}
+
+.modal.open {
+  display: flex;
 }
 
 .modal-content {
